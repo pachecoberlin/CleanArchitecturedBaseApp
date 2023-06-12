@@ -12,7 +12,7 @@ class ReflowViewModel @Inject constructor(private val reflowRepository: ReflowRe
 ) : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is reflow Fragment"
+        value = reflowRepository.getReflows().first().name
     }
     val text: LiveData<String> = _text
 }
